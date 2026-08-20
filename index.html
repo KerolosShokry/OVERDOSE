@@ -1,460 +1,169 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OVERDOSE Cheats | Premium Performance Tools</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/android-chrome-192x192.png">
-    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
-    <style>
-        /* Global Styles & Reset */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #0a0a0a;
-            color: #ffffff;
-            line-height: 1.6;
-        }
-
-        /* Fixed Navigation Bar */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.95);
-            padding: 20px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #222222;
-            z-index: 1000;
-        }
-
-        .navbar .logo a {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 800;
-            font-size: 1.5rem;
-            color: #ffffff;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .navbar nav ul {
-            list-style: none;
-            display: flex;
-            gap: 30px;
-            align-items: center;
-        }
-
-        .navbar nav ul li a {
-            color: #888888;
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: color 0.3s ease;
-        }
-
-        .navbar nav ul li a:hover {
-            color: #ffffff;
-        }
-
-        /* Base Section Layout */
-        section {
-            padding: 100px 20px 60px;
-            min-height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 40px;
-            text-align: center;
-            color: #ffffff;
-        }
-
-        /* 1. Hero Section */
-        .hero {
-            min-height: 100vh;
-            text-align: center;
-            padding-top: 140px;
-        }
-
-        .hero h1.main-title {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 900;
-            font-size: 4.8rem;
-            color: #ffffff;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 20px;
-            text-shadow: 
-                0 0 10px rgba(255, 255, 255, 0.9),
-                0 0 20px rgba(255, 255, 255, 0.7),
-                0 0 35px rgba(255, 255, 255, 0.5),
-                0 0 50px rgba(255, 255, 255, 0.3);
-        }
-
-        .hero p.subtitle {
-            font-size: 1.25rem;
-            color: #a0a0a0;
-            max-width: 750px;
-            line-height: 1.6;
-            margin-bottom: 35px;
-        }
-
-        /* Grid Layouts for Features & Products */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            width: 100%;
-        }
-
-        .card {
-            background-color: #121212;
-            border: 1px solid #222222;
-            border-radius: 8px;
-            padding: 30px;
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: #ffffff;
-        }
-
-        /* 2. Features Section */
-        .feature-card h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            color: #ffffff;
-        }
-
-        .feature-card p {
-            color: #888888;
-            font-size: 0.95rem;
-        }
-
-        /* 3. Products Section */
-        .product-card {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .product-card h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-        }
-
-        .product-card .price {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 15px;
-        }
-
-        .product-card ul {
-            list-style: none;
-            color: #888888;
-            font-size: 0.9rem;
-            margin-bottom: 25px;
-        }
-
-        .product-card ul li {
-            margin-bottom: 8px;
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            background-color: #ffffff;
-            color: #000000;
-            padding: 12px 25px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 800;
-            text-transform: uppercase;
-            text-decoration: none;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            text-align: center;
-            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-        }
-
-        .btn:hover {
-            background-color: #cccccc;
-        }
-
-        .btn-discord {
-            background-color: #5865F2;
-            color: #ffffff;
-        }
-
-        .btn-discord:hover {
-            background-color: #4752C4;
-        }
-
-        /* 4. Contact Section */
-        .contact-container {
-            width: 100%;
-            max-width: 600px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 25px;
-        }
-
-        .contact-form {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .form-group label {
-            font-size: 0.9rem;
-            color: #888888;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            background-color: #121212;
-            border: 1px solid #222222;
-            padding: 15px;
-            border-radius: 4px;
-            color: #ffffff;
-            font-family: 'Roboto', sans-serif;
-            font-size: 1rem;
-            outline: none;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            border-color: #ffffff;
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .divider {
-            color: #555555;
-            font-weight: bold;
-            margin: 10px 0;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #000000;
-            padding: 25px;
-            text-align: center;
-            border-top: 1px solid #222222;
-            margin-top: 40px;
-        }
-
-        footer p {
-            font-size: 0.9rem;
-            color: #666666;
-        }
-
-        footer strong {
-            color: #aaaaaa;
-            font-weight: 700;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                gap: 15px;
-                padding: 15px;
-            }
-
-            .hero h1.main-title {
-                font-size: 2.8rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            section {
-                padding-top: 120px;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Header Navigation -->
-    <header class="navbar">
-        <div class="logo">
-            <a href="#home">OVERDOSE CHEATS</a>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>OVERDOSE — Next Gen</title>
+    <meta name="description" content="OVERDOSE is a premium operations platform for secure downloads, system status, and mission log tracking." />
+    <meta property="og:title" content="OVERDOSE — Next Gen" />
+    <meta property="og:description" content="OVERDOSE is a premium operations platform for secure downloads, system status, and mission log tracking." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%231D5B60'/%3E%3C/svg%3E" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="page-loader" aria-live="polite" aria-label="Loading website">
+      <div class="loader-shell">
+        <div class="loader-brand">OVERDOSE</div>
+        <img class="loader-gif" src="./Assets/pub.gif" alt="Loading animation" />
+        <div class="loader-bar" aria-hidden="true">
+          <div class="loader-fill"></div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#features">FEATURES</a></li>
-                <li><a href="#products">PRODUCTS</a></li>
-                <li><a href="#contact">CONTACT US</a></li>
-            </ul>
-        </nav>
+      </div>
+    </div>
+
+    <div class="scene" aria-hidden="true">
+      <div class="scene-grid"></div>
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="scanline"></div>
+      <div class="noise"></div>
+    </div>
+    <header class="appbar">
+      <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="title"><img class="brand-image" src="file:///C:/Users/TROJAN/Downloads/New%20folder/Assets/Don't%20just%20play,%20OVERDOSE.png" alt="Overdose" /><span id="page-title">Home</span></div>
+      <button class="theme-switch" type="button" aria-label="Toggle theme">
+        <svg class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+          <circle cx="12" cy="12" r="5" />
+          <path d="M12 1v2" />
+          <path d="M12 21v2" />
+          <path d="M4.22 4.22l1.42 1.42" />
+          <path d="M18.36 18.36l1.42 1.42" />
+          <path d="M1 12h2" />
+          <path d="M21 12h2" />
+          <path d="M4.22 19.78l1.42-1.42" />
+          <path d="M18.36 5.64l1.42-1.42" />
+        </svg>
+      </button>
     </header>
 
-    <!-- 1. Home / Hero Section -->
-    <section class="hero" id="home">
-        <h1 class="main-title">OVERDOSE CHEATS</h1>
-        <p class="subtitle">
-            Your Ultimate Game Enhancement Suite. Achieve Absolute Domination with Premium Performance Tools.
-        </p>
-        <a href="https://discord.gg/Ng6HbBCmp5" target="_blank" class="btn btn-discord">Join Our Discord</a>
+    <div class="scrim" data-close-menu></div>
+    <section class="top-menu" id="site-menu" aria-hidden="true">
+      <div class="drawer-head">
+        <div class="logo">OVERDOSE</div>
+        <div class="sub">Operations Toolkit · v2.4.1</div>
+      </div>
+      <nav aria-label="Primary navigation">
+        <a href="#/" data-link><span class="ic">⌂</span>Home</a>
+        <a href="#/download" data-link><span class="ic">↓</span>PUBG</a>
+        <a href="#/overdose" data-link><span class="ic">⚡</span>Overdose</a>
+        <a href="#/status" data-link><span class="ic">◉</span>Status</a>
+        <a href="#/credits" data-link><span class="ic">★</span>Credits</a>
+      </nav>
+      <div class="foot">© OVERDOSE 2026 · All Rights Reserved</div>
     </section>
 
-    <!-- 2. Features Section -->
-    <section id="features">
-        <h2 class="section-title">Features</h2>
-        <div class="grid-container">
-            <div class="card feature-card">
-                <h3>Undetected Security</h3>
-                <p>Advanced hypervisor-level protection ensures maximum safety and zero detection rates across all supported titles.</p>
-            </div>
-            <div class="card feature-card">
-                <h3>High Performance</h3>
-                <p>Engineered for zero frame drops. Seamless execution with lightweight background processing.</p>
-            </div>
-            <div class="card feature-card">
-                <h3>Instant Activation</h3>
-                <p>Get automated instant delivery and access to your key immediately after completing your purchase.</p>
-            </div>
-            <div class="card feature-card">
-                <h3>24/7 Support</h3>
-                <p>Our dedicated support team is available around the clock on Discord to assist with setup and troubleshooting.</p>
-            </div>
+    <main id="app" tabindex="-1"></main>
+
+    <template id="home-template">
+      <section class="hero reveal">
+        <span class="chip">System online · Build 2.4.1</span>
+        <img class="hero-brand" src="file:///C:/Users/TROJAN/Downloads/New%20folder/Assets/Don't%20just%20play,%20OVERDOSE.png" alt="Overdose" />
+        <h1>OVERDOSE</h1>
+        <p class="sub">Your Ultimate Game Enhancement Suite. Achieve Absolute Domination with Premium Performance Tools.
+
+</p>
+        <div class="cta"><a href="#/overdose" class="btn" data-link>Get Overdose</a><a href="#/status" class="btn ghost" data-link>View status</a></div>
+      </section>
+
+      <div class="chip-holder">
+        <h3 class="chip-heading">
+          <a class="chip levitate blink" href="#/live" role="button">Live server configuration</a>
+        </h3>
+      </div>
+
+      <div class="dash-grid home-status-grid" style="margin-top:20px;">
+        <div class="dash-card reveal d1"><div class="k">Network Matrix</div><div class="v small">Stable</div><div class="bar"><span style="width:94%"></span></div></div>
+        <div class="dash-card reveal d2 latency-card"><div class="k">Latency</div><div class="v latency-value">11ms</div><div class="bar"><span class="latency-bar" style="width:18%"></span></div></div>
+        <div class="dash-card reveal d3"><div class="k">Security</div><div class="v small">Shielded</div><div class="bar"><span style="width:100%"></span></div></div>
+        <div class="dash-card reveal d4"><div class="k">Active Nodes</div><div class="v">1,284</div><div class="bar"><span style="width:82%"></span></div></div>
+      </div>
+
+      <div class="chip-holder">
+        <h3 class="chip-heading">
+          <a class="chip levitate blink" href="#/live" role="button">Overdose support</a>
+        </h3>
+      </div>
+      <div class="support-card reveal">
+        <img src="file:///C:/Users/TROJAN/Downloads/New%20folder/Assets/Don't%20just%20play,%20OVERDOSE.png" alt="Overdose" />
+        <div class="support-title">Overdose support</div>
+        <p class="support-copy">Instant help and community updates in one place. Join the group for tips, alerts, and live operator support.</p>
+        <a class="btn small" href="https://discord.gg/s3nurzUCMz" target="_blank" rel="noreferrer">Join Discord</a>
+      </div>
+    </template>
+
+    <template id="download-template">
+      <div class="section-head reveal"><div class="kicker">Distribution</div><h2>PUBG</h2><div class="desc">Choose the correct regional package and architecture for your device.</div></div>
+      <div class="download-note reveal d5">
+        <span class="blink-dot" aria-hidden="true"></span>
+        <p><strong>Note:</strong> We have integrated APKpure. You can install it directly from here and download any PUBG according to your taste.</p>
+      </div>
+      <div class="app-list">
+        <div class="app-card reveal d1"><div class="app-icon"><img src="./Assets/icon.png" alt="APK Pure" /></div><h3>APK Pure</h3><div class="app-meta"><span>v3.20.X</span><span class="dot-sep">25 MB</span><span class="dot-sep">Android 6+</span></div><p> App store from where you can download any PUBG without any restrictions.</p><div class="app-actions single-button"><a class="btn small" href="https://apkpure.net/apkpure/com.apkpure.aegon" target="_blank" rel="noreferrer">Download</a></div></div>
+        <div class="app-card reveal d3"><div class="app-icon"><img src="./Assets/gl.webp" alt="PUBG Mobile Global" /></div><h3>PUBG Mobile Global</h3><div class="app-meta"><span>v4.5.0</span><span class="dot-sep">1.4 GB</span><span class="dot-sep">Android 8+</span></div><p>Full global compatibility with anti-signature stealth core.</p><div class="app-actions"><a class="btn small" href="https://apkpure.com/search?q=Pubg" target="_blank" rel="noreferrer">32 bit</a><a class="btn small ghost" href="https://apkpure.com/search?q=Pubg" target="_blank" rel="noreferrer">64 bit</a></div></div>
+        <div class="app-card reveal d4"><div class="app-icon"><img src="./Assets/kr.png" alt="PUBG Mobile Korea" /></div><h3>PUBG Mobile Korea</h3><div class="app-meta"><span>v4.5.0</span><span class="dot-sep">1.4 GB</span><span class="dot-sep">Android 8+</span></div><p>Tuned for KR/JP relays with lightweight injection profile.</p><div class="app-actions"><a class="btn small" href="https://apkpure.com/search?q=Pubg" target="_blank" rel="noreferrer">32 bit</a><a class="btn small ghost" href="https://apkpure.com/search?q=Pubg" target="_blank" rel="noreferrer">64 bit</a></div></div>
+        <div class="app-card reveal d5"><div class="app-icon"><img src="./Assets/tw.jpg" alt="PUBG Mobile Taiwan" /></div><h3>PUBG Mobile Taiwan</h3><div class="app-meta"><span>v4.5.0</span><span class="dot-sep">1.4 GB</span><span class="dot-sep">Android 8+</span></div><p>Traditional client support with adaptive latency shaping.</p><div class="app-actions"><a class="btn small" href="https://apkpure.com/search?q=Pubg" target="_blank" rel="noreferrer">32 bit</a><a class="btn small ghost" href="https://apkpure.com/search?q=Pubg" target="_blank" rel="noreferrer">64 bit</a></div></div>
+      </div>
+    </template>
+
+    <template id="overdose-template">
+      <div class="section-head reveal"><div class="kicker">Release center</div><h2>Overdose</h2><div class="desc">Download the recommended Overdose distribution for your environment.</div></div>
+      <div class="build-block reveal">
+        <div class="build-icon"><img src="file:///C:/Users/TROJAN/Downloads/New%20folder/Assets/Don't%20just%20play,%20OVERDOSE.png" alt="Overdose" /></div>
+        <h3>Overdose</h3>
+        <p>Stable and optimized releases for emulators and android devices with silent cloud updates.</p>
+        <div class="app-actions overdose-actions">
+          <a class="btn small" href="https://discord.gg/s3nurzUCMz" download>32 bit</a>
+          <a class="btn small ghost" href="https://discord.gg/s3nurzUCMz" download>64 bit</a>
         </div>
-    </section>
+      </div>
+      <div class="rating-block reveal"><div class="stars">★★★★★</div><div class="num">4.9</div><div class="count">Based on 24,318 verified user reviews</div><div class="testimonials"><div class="testimonial reveal d1"><div class="who"><div class="avatar">G</div><div><div class="name">Ghostreaper</div><div class="role">Conqueror · Asia</div></div></div><q>Zero detection in 3 seasons. Rock solid injection layer.</q></div><div class="testimonial reveal d2"><div class="who"><div class="avatar">N</div><div><div class="name">Nova 77</div><div class="role">Ace Dominator</div></div></div><q>The latency dashboard is beautiful. Feels premium.</q></div><div class="testimonial reveal d3"><div class="who"><div class="avatar">V</div><div><div class="name">Voidwalker</div><div class="role">Squad Leader</div></div></div><q>Multi-emulator switching is instant. Great engineering.</q></div></div></div>
+    </template>
 
-    <!-- 3. Products Section -->
-    <section id="products">
-        <h2 class="section-title">Products</h2>
-        <div class="grid-container">
-            <!-- Product 1: Hax Package -->
-            <div class="card product-card">
-                <div>
-                    <h3>Game Hax Suite</h3>
-                    <div class="price">Full Access</div>
-                    <ul>
-                        <li>✔ Aimbot & Memory Enhancements</li>
-                        <li>✔ ESP / Wallhack Visuals</li>
-                        <li>✔ Smooth & Natural Recoil Control</li>
-                        <li>✔ Highly Customizable Settings</li>
-                    </ul>
-                </div>
-                <a href="https://discord.gg/Ng6HbBCmp5" target="_blank" class="btn btn-discord">Get Hax via Discord</a>
-            </div>
+    <template id="status-template">
+      <div class="section-head reveal"><div class="kicker">Relay matrix · Node 07</div><h2>System status</h2><div class="desc">Live diagnostics across the OVERDOSE network.</div></div>
+      <div class="status-banner reveal"><span class="dot"></span><div class="txt"><div class="l1">All systems operational</div><div class="l2">Last check · a few seconds ago</div></div></div>
+      <div class="dash-grid">
+        <div class="dash-card reveal d1"><div class="k">Network Matrix</div><div class="v small">Stable</div><div class="bar"><span style="width:94%"></span></div></div>
+        <div class="dash-card reveal d2 latency-card"><div class="k">Latency</div><div class="v latency-value">11ms</div><div class="bar"><span class="latency-bar" style="width:18%"></span></div></div>
+        <div class="dash-card reveal d3"><div class="k">Security</div><div class="v small">Shielded</div><div class="bar"><span style="width:100%"></span></div></div>
+        <div class="dash-card reveal d4"><div class="k">Active Nodes</div><div class="v">1,284</div><div class="bar"><span style="width:82%"></span></div></div>
+      </div>
+      <div class="list-card reveal"><div class="list-head">Overdose users</div><div class="list-row"><span class="lbl">PUBG Global</span><span class="val" data-target="1500"><span class="dot"></span><span class="count">0</span></span></div><div class="list-row"><span class="lbl">BGMI India</span><span class="val" data-target="1080"><span class="dot"></span><span class="count">0</span></span></div><div class="list-row"><span class="lbl">PUBG Korea</span><span class="val" data-target="700"><span class="dot"></span><span class="count">0</span></span></div><div class="list-row"><span class="lbl">PUBG Taiwan</span><span class="val" data-target="300"><span class="dot"></span><span class="count">0</span></span></div></div>
+      <div class="action-row reveal"><button class="btn block" id="rescan" type="button">Rescan system</button></div>
+    </template>
 
-            <!-- Product 2: Anti-Ban Protection -->
-            <div class="card product-card">
-                <div>
-                    <h3>Anti-Ban Bypass</h3>
-                    <div class="price">Maximum Protection</div>
-                    <ul>
-                        <li>✔ Kernel-Level Anti-Cheat Bypass</li>
-                        <li>✔ HWID Spoofer Built-in</li>
-                        <li>✔ Auto-Updating Signatures</li>
-                        <li>✔ Safe Account Protection</li>
-                    </ul>
-                </div>
-                <a href="https://discord.gg/Ng6HbBCmp5" target="_blank" class="btn btn-discord">Get Anti-Ban via Discord</a>
-            </div>
+    <template id="credits-template">
+      <div class="section-head reveal"><div class="kicker">Recognition</div><h2>Credits</h2><div class="desc">The people and ideas behind the OVERDOSE experience.</div></div>
+      <div class="credits-grid">
+        <article class="credit-card reveal d1">
+          <div class="credit-avatar"><img src="./Assets/Don't just play, OVERDOSE.png" alt="Ghost hacker" /></div>
+          <h3>OVERDOSE</h3>
+          <span class="credit-role">Owner</span>
+          <p>He who created this system . The original mind behind the software, guiding the platform with vision, control, and ownership of the full project.</p>
+        </article>
+      </div>
+    </template>
 
-            <!-- Product 3: Bundle Package -->
-            <div class="card product-card">
-                <div>
-                    <h3>Full Bundle (Hax + Anti-Ban)</h3>
-                    <div class="price">Complete Suite</div>
-                    <ul>
-                        <li>✔ Includes Full Hax Suite</li>
-                        <li>✔ Includes Advanced Anti-Ban & HWID Spoofer</li>
-                        <li>✔ VIP Discord Role & Priority Support</li>
-                        <li>✔ Free Future Updates</li>
-                    </ul>
-                </div>
-                <a href="https://discord.gg/Ng6HbBCmp5" target="_blank" class="btn btn-discord">Get Bundle via Discord</a>
-            </div>
-        </div>
-    </section>
+    <footer class="site">OVERDOSE 2026 · All Rights Reserved</footer>
 
-    <!-- 4. Contact Us Section -->
-    <section id="contact">
-        <h2 class="section-title">Contact Us</h2>
-        <div class="contact-container">
-            <a href="https://discord.gg/Ng6HbBCmp5" target="_blank" class="btn btn-discord" style="width: 100%; font-size: 1.1rem; padding: 15px;">Join Discord Community</a>
-            <div class="divider">— OR —</div>
-            <form class="contact-form" onsubmit="event.preventDefault();">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Your Email Address" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" placeholder="How can we help you?" required></textarea>
-                </div>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 <strong>OVERDOSE CHEATS</strong>. All Rights Reserved.</p>
-    </footer>
-
-</body>
+    <script src="script.js" defer></script>
+  </body>
 </html>
